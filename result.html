@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Emotion Prediction</title>
+    <style>
+        /* Body styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url('https://neurosciencenews.com/files/2023/06/ai-emotion-neurosicences.jpg.webp');
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Container styles */
+        .container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8); /* Add a semi-transparent white background to improve readability */
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* Header styles */
+        h1 {
+            color: #333;
+        }
+
+        /* Form styles */
+        form {
+            margin-top: 20px;
+        }
+
+        /* Text input styles */
+        input[type="text"] {
+            width: 300px;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        /* Submit button styles */
+        input[type="submit"] {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Submit button hover effect */
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Emotion Prediction</h1>
+        <img src="https://www.counselingintegrity.com/wp-content/uploads/2020/05/get-in-touch-with-emotions.png" alt="Image related to emotions"> 
+        <h1>Prediction Result</h1>
+        <p>The predicted emotion is:
+            {% if prediction == 0 %}
+                sadness <br>
+                <img src="https://cdn.pixabay.com/photo/2020/05/25/15/18/sad-5219057_960_720.png" alt="Sadness Image" width="200">
+            {% elif prediction == 1 %}
+                joy <br>
+                <img src="https://i.pinimg.com/736x/b8/85/cc/b885cc6b419a7f770798f65fceb75eb7.jpg" alt="Joy Image" width="200">
+            {% elif prediction == 2 %}
+                love <br>
+                <img src="https://img.freepik.com/free-photo/digital-art-valentine-s-day-scene-with-hearts_23-2151164163.jpg?size=626&ext=jpg&ga=GA1.1.1224184972.1714348800&semt=ais" alt="Love Image" width="200">
+            {% elif prediction == 3 %}
+                anger <br>
+                <img src="https://cdn.pixabay.com/photo/2016/01/19/07/35/strength-1148029_1280.jpg" alt="Anger Image" width="200">
+            {% elif prediction == 4 %}
+                fear <br>
+                <img src="https://banner2.cleanpng.com/20180203/rcw/kisspng-smiley-emoticon-face-clip-art-afraid-face-cliparts-5a75ff7dc4aab0.5287827215176825578056.jpg" alt="Fear Image" width="200">
+            {% elif prediction == 5 %}
+                surprise <br>
+                <img src="https://c7.alamy.com/comp/MNNJMP/surprised-emoticon-smiley-MNNJMP.jpg" alt="Surprise Image" width="200">
+            {% else %}
+                Unknown <br>
+                <img src="https://t3.ftcdn.net/jpg/04/53/80/42/360_F_453804245_kN1WynwdwxtcOu3txUQJId58Ur0AXV2l.jpg" alt="Unknown Image" width="200">
+            {% endif %}
+        </p>
+    </div>
+</body>
+</html>

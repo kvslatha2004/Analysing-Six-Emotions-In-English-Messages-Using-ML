@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Emotion Prediction</title>
+    <style>
+        /* Body styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url('https://neurosciencenews.com/files/2023/06/ai-emotion-neurosicences.jpg.webp');
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Container styles */
+        .container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8); /* Add a semi-transparent white background to improve readability */
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* Header styles */
+        h1 {
+            color: #333;
+        }
+
+        /* Form styles */
+        form {
+            margin-top: 20px;
+        }
+
+        /* Text input styles */
+        input[type="text"] {
+            width: 300px;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        /* Submit button styles */
+        input[type="submit"] {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Submit button hover effect */
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Emotion Prediction</h1>
+        <img src="https://www.brainframe-kids.com/emotions/images/facts-primary-answers-900w.png" alt="Image related to emotions"> 
+
+        <form action="/predict" method="post">
+            <input type="text" name="text" placeholder="Enter your text...">
+            <br>
+            <input type="submit" value="Predict">
+        </form>
+    </div>
+</body>
+</html>
